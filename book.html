@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="">
+
+    <header id="main-header"
+        class="w-full transition-[height] duration-700 ease-in-out bg-[url(./assets/images/other.jpg)] bg-top bg-cover">
+        <section class="relative z-10 text-white">
+            <!-- Desktop menu -->
+            <div class="hidden lg:flex justify-between items-center p-8 max-w-[1440px] mx-auto">
+                <p class="police-dancing text-3xl font-bold">Feane</p>
+                <ul class="flex gap-6">
+                    <li><a href="./index.html" class="uppercase">Home</a></li>
+                    <li><a href="./menu.html" class="uppercase">Menu</a></li>
+                    <li><a href="./about.html" class="uppercase">About</a></li>
+                    <li><a href="./book.html" class="text-yellow-600 uppercase">Book Table</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <div class="flex gap-4">
+                        <i class="fa-solid fa-user hover:text-yellow-500"></i>
+                        <i class="fa-solid fa-cart-shopping hover:text-yellow-500"></i>
+                        <i class="fa-solid fa-magnifying-glass hover:text-yellow-500"></i>
+                    </div>
+                    <button class="block bg-yellow-400 py-2 px-4 rounded-3xl">Order online</button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="relative flex items-center justify-center p-8 max-w-[1440px] mx-auto lg:hidden">
+                <input type="checkbox" id="menu-btn" class="peer" hidden>
+                <p class="absolute left-6 top-4 police-dancing text-3xl font-bold">Feane</p>
+
+                <label for="menu-btn"
+                    class="absolute right-6 top-4 lg:hidden cursor-pointer text-2xl transition-transform duration-700 ease-in-out opacity-100 peer-checked:rotate-180 peer-checked:opacity-0">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <label for="menu-btn"
+                    class="absolute right-6 top-4 lg:hidden cursor-pointer text-2xl transition-transform duration-700 opacity-0 ease-in-out peer-checked:rotate-180 peer-checked:opacity-100">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <div class="hidden flex-col items-center justify-center gap-6 peer-checked:flex">
+                    <ul class="flex flex-col gap-4 items-center">
+                        <li><a href="./index.html" class="uppercase">Home</a></li>
+                        <li><a href="./menu.html" class=" uppercase">Menu</a></li>
+                        <li><a href="./about.html" class="uppercase">About</a></li>
+                        <li><a href="./book.html" class="text-yellow-600 uppercase">Book Table</a></li>
+                    </ul>
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-user hover:text-yellow-500"></i>
+                            <i class="fa-solid fa-cart-shopping hover:text-yellow-500"></i>
+                            <i class="fa-solid fa-magnifying-glass hover:text-yellow-500"></i>
+                        </div>
+                        <button class="bg-yellow-400 py-2 px-4 rounded-3xl">Order online</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </header>
+
+    <main class="min-h-screen lg:min-h-[90vh]">
+        <!-- contenu principal -->
+        <!-- Section contact -->
+
+        <section class="max-w-[1440px m-auto h-auto] mt-10 md:mt-20">
+            <div class="w-[95%] max-w-[1000px] m-auto p-8">
+                <h2 class="police-dancing text-5xl mb-10">Book Table</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div>
+                        <form action="" class="flex flex-col gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full border-2 p-2 rounded-md">
+                            <input type="tel" placeholder="Your Number" class="w-full border-2 p-2 rounded-md">
+                            <input type="email" placeholder="Your Email" class="w-full border-2 p-2 rounded-md">
+                            <select name="" id="" class="w-full border-2 p-2 rounded-md">
+                                <option value="" class="bg-neutral-400">How many persons?</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <input type="date" name="" id="" class="w-full border-2 p-2 rounded-md">
+                            <div class="flex justify-center items-center p-4">
+                                <button class="py-2 px-4 bg-yellow-500 text-white rounded-[100px]">Book Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6829.03985002693!2d2.128275192427495!3d13.522214952929957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11d07544b60e4aa9%3A0x95b909c768fff014!2sGrande%20Mosqu%C3%A9e%20de%20Niamey!5e1!3m2!1sfr!2sne!4v1765817056988!5m2!1sfr!2sne"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-[350px] "></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900">
+        <section class="max-w-[1440px] m-auto h-auto">
+            <div class="w-[95%] max-w-[1000px] m-auto p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 text-white">
+                    <div class="flex flex-col gap-4 items-center">
+                        <div>
+                            <p class="text-4xl police-dancing">contact Us</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center gap-2 text-gray-300">
+                            <div class="flex items-center gap-2 hover:text-yellow-500 cursor-pointer"><i
+                                    class="fa-solid fa-location-dot"></i>
+                                <p>Location</p>
+                            </div>
+                            <div class="flex items-center gap-2 hover:text-yellow-500 cursor-pointer"><i
+                                    class="fa-solid fa-phone"></i>
+                                <p>Call +01 1234567890</p>
+                            </div>
+                            <div class="flex items-center gap-2 hover:text-yellow-500 cursor-pointer"><i
+                                    class="fa-solid fa-envelope"></i>
+                                <p>demo@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 items-center">
+                        <div>
+                            <p class="text-4xl police-dancing">Feane</p>
+                        </div>
+
+                        <div class="text-gray-300">
+                            <p class="text-center">Necessary, making this the first true generator on the Internet. It
+                                uses a dictionary
+                                of over 200 Latin words, combined with</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="flex items-center justify-center text-slate-900 w-10 h-10 bg-white rounded-full hover:text-yellow-500">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div
+                                class="flex items-center justify-center text-slate-900 w-10 h-10 bg-white rounded-full hover:text-yellow-500">
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div
+                                class="flex items-center justify-center text-slate-900 w-10 h-10 bg-white rounded-full hover:text-yellow-500">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </div>
+                            <div
+                                class="flex items-center justify-center text-slate-900 w-10 h-10 bg-white rounded-full hover:text-yellow-500">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div
+                                class="flex items-center justify-center text-slate-900 w-10 h-10 bg-white rounded-full hover:text-yellow-500">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div>
+                            <p class="text-4xl police-dancing">Opening Hours</p>
+                        </div>
+
+                        <div class="text-gray-300">
+                            <p class="text-center">Everyday</p>
+                        </div>
+                        <div class="text-gray-300">
+                            <p class="text-center">10:00 AM - 10:00 PM</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="flex flex-col items-center justify-center text-white mt-10">
+                    <p>&copy; 2025 All Rights Reserved By Free Html Templates</p>
+                    <p>&copy; Distributed By Code Runner</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>

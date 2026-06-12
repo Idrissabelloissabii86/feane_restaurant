@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.police-dancing {
+    font-family: 'Dancing Script', cursive;
+}
+#main-header {
+  transition: height 0.7s ease-in-out !important;
+}
+.dot.active {
+  background-color: #EAB308;
+  transform: scale(1.2);     
+}
+
+.slider{
+  transition: transform 1s ease-in-out;
+}
+
+.slide{
+  transition: transform 1s ease-in-out, width 1s ease-in-out;
+}
+
+.dot-container{
+  /* transform: translateX(-50%); */
+  color: #fff;
+}
+
+
+
+.dot{
+  transition: background-color 0.6 ease;
+}
+
+.active-dot{
+  background-color: #EAB308;
+}
+
+.header-expanded {
+    height: 90vh !important; /* Hauteur quand le menu est ouvert */
+}
+/* Optionnel : ajustement pour tablettes */
+@media (min-width: 768px) {
+    .header-expanded {
+        height: 70vh !important;
+    }
+}
+
+
+
+
+
