@@ -9,8 +9,22 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 #main-header {
-  transition: height 0.7s ease-in-out !important;
+  transition: height 0.9s ease-in-out !important;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.55) 100%);
+}
+
+.slide-content {
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
 .dot.active {
   background-color: #EAB308;
   transform: scale(1.2);     
@@ -40,12 +54,24 @@ body{
 }
 
 .header-expanded {
-    height: 90vh !important; /* Hauteur quand le menu est ouvert */
+    height: auto !important;
+    min-height: 80vh !important;
+    transition-duration: 1s !important;
 }
+
+.header-expanded .slide-container {
+    padding-bottom: 1rem;
+}
+
+.header-expanded section:last-of-type {
+    min-height: auto;
+}
+
 /* Optionnel : ajustement pour tablettes */
 @media (min-width: 768px) {
     .header-expanded {
-        height: 70vh !important;
+        min-height: 70vh !important;
+        transition-duration: 0.9s !important;
     }
 }
 

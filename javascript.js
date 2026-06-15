@@ -19,33 +19,26 @@ const slider = document.querySelector('.slider');
 const totalSlides = slides.length;
 
 function updateSlider() {
-    // Déplacement de l'ensemble du slider
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
     slides.forEach((slide, i) => {
         const isCurrent = i === currentIndex;
-        
-        // Ciblage du conteneur interne pour l'effet de scale
-        const content = slide.querySelector('.slide-content');
-        
-        if (content) {
-            // Application du scale pour l'effet visuel sans affecter la largeur de défilement
-            content.style.transform = isCurrent ? 'scale(1)' : 'scale(0.8)';
-            // Application d'une opacité pour mieux distinguer la slide active
-            content.style.opacity = isCurrent ? '1' : '0.6';
-        }
+        const content = slide.querySelector('.slide-content') || slide;
+
+        content.style.transform = isCurrent ? 'translateY(0) scale(1)' : 'translateY(12px) scale(0.96)';
+        content.style.opacity = isCurrent ? '1' : '0.72';
     });
 
-    // Mise à jour de la couleur des points de navigation
     dots.forEach((dot, i) => {
         const isActive = i === currentIndex;
-        
-        // Classes Tailwind pour la couleur et l'opacité
-        dot.classList.toggle('bg-yellow-400', isActive); // Point actif
+
+        dot.classList.toggle('bg-yellow-400', isActive);
         dot.classList.toggle('animate-bounce', isActive);
-        dot.classList.toggle('bg-white', !isActive);     // Point inactif
+        dot.classList.toggle('bg-white', !isActive);
         dot.classList.toggle('opacity-100', isActive);
-        // dot.classList.toggle('opacity-50', !isActive);   // Assombrir les points inactifs
+        dot.classList.toggle('opacity-60', !isActive);
+        dot.classList.toggle('scale-110', isActive);
+        dot.classList.toggle('scale-100', !isActive);
     });
 }
 
